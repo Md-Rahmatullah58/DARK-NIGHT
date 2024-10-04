@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark-modde</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        main{
+            margin: 5vh 15%;
+
+        }
+        h1{
+            font-size: 40px;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        img{
+            width: 50%;
+            height: auto;
+
+            box-shadow: 5px 5px 5px 5px  #000;
+        }
+
+        p{
+            text-align: justify;
+            font-size: 18px;
+        }
+        label{
+            position: absolute;
+            width: 45px;
+            height: 22px;
+            right: 20px;
+            top: 20px;
+            border: 2px solid;
+            border-radius: 20px;
+        }
+        label:before{
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 20px;
+            left:  2px;
+            top: 2px;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: 0.4s;
+            background: #000;
+
+        }
+        label.active:before{
+            left: 24px;
+            background: #fff;
+        }
+        body.night{
+         background: #000;
+         color: #fff;
+          }
+    </style>
+</head>
+<body>
+    <header>
+        <label id="dark-change"></label>
+    </header>
+    <main>
+        <h1>Dark-Mode</h1>
+        <div id="respon">
+        <img src="lalten.jpg" >
+        <p>A light-on-dark color scheme, better known as dark mode, dark theme or night mode, is a color scheme that uses light-colored text, icons, and graphical user interface elements on a dark background. It is often discussed in terms of computer user interface design and web design</p>
+    </div>
+    </main>
+</body>
+    <script>
+        var content =document.getElementsByTagName('body')[0];
+        var darkMode = document.getElementById('dark-change');
+        darkMode.addEventListener('click', function(){
+            darkMode.classList.toggle('active');
+            content.classList.toggle('night');
+
+        });
+    </script>
+
+</html>
